@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    
+     <div class="container">
+        <form action="result.html" class="form">
+            <input type="file" id="myFileInput">
+            <img id="imgPreview" src="image/defaultImage.png" alt="">
+            <div class="flex">
+                <label class="choose-file" for="myFileInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
+                        <g><rect fill="none" height="24" width="24"/></g>
+                        <g><path d="M14,2H4v20h16V8L14,2z M13,15v4h-2v-4H8l4.01-4L16,15H13z M13,9V3.5L18.5,9H13z"/></g>
+                    </svg>
+                    Choose a photo
+                </label>
+                <button class="deleteImage" onclick="deletePhoto()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 0 24 24" width="26px" fill="#fff">
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                    </svg>
+                    Delete a photo
+                </button>
+            </div>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" placeholder="Enter Your Surname"required>
+            <br>
+            <label for="number">Phone Number:</label>
+            <input type="number" id="number" placeholder="Enter Your Phone Number"required>
+            <br>
+            <label for="">Job:</label>
+            
+            <select name="job" id="" required>
+                <option class="default" value="" selected disabled>Enter Your Job</option>
+                <option value="worker">
+                    Worker
+                </option>
+                <option value="developer">
+                    Developer
+                </option>
+                <option value="student">
+                    Student
+                </option>
+                <option value="trainee">
+                    Trainee
+                </option>
+                <option value="teacher">Teacher</option>
+            </select>
+             <br>
+            <label for="gender">
+                Gender:
+            </label>
+            <select name="" id="gender" required>
+                <option selected disabled class="default" value="">Enter Your Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="">Other...</option>
+            </select>
+            <button class="send">Send</button>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

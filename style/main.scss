@@ -1,0 +1,130 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:" Comic Neue",cursive;
+}
+
+body{
+    background-color: #eaeaea   ;
+}
+
+.bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.container{
+    max-width: 500px;
+    margin : 0px auto;
+    background-color: rgba(24, 149, 252, 0.533);
+    padding: 20px;
+}
+
+input[type = "file"]{
+    display: none;
+}
+
+.choose-file{
+    padding: 12px;
+    background-color: orange;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+#imgPreview{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+.deleteImage{
+    padding: 12px;
+    background-color: rgba(87, 69, 245, 0.63);
+    display: inline-block;
+    border: none;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+label{
+    display: block;
+    width: 100%;
+}
+
+input, select,button{
+    width: 100%;
+    outline: none;
+    display: flex;
+}
+
+
+.flex{
+    display: flex;
+}
+
+
+input,select{
+    padding: 10px 20px;
+    border-radius: 12px;
+    appearance: none;
+    border: 1px solid #ccc;
+}
+
+.send{
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(35, 112, 112);
+    margin-top: 10px;
+    border: none;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 16px;
+    
+    &::after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        bottom: -4px;
+        margin: 0 auto;
+        left: 0;
+        border-radius: 2px;
+        right: 0;
+        width: 0%;
+        background: transparent;
+        transition:.5s;
+
+        
+    }
+    &:hover::after{
+        width: 100%;
+        background-color: rgb(35, 112, 112);
+    }
+}
+
