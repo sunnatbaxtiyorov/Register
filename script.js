@@ -64,10 +64,15 @@ function addInfo(){
     const info = {
         name: document.getElementById('name').value,
         surname:document.getElementById("surname").value,
-        phone : document.getElementById("number").value,
+        phone : document.getElementById("number").value, 
         job : document.getElementById("job").value,
         gender : document.getElementById("gender").value
     }
 
     localStorage.setItem("info",JSON.stringify(info));
+}
+
+
+function resultBtn(){
+    document.querySelector(".div").innerHTML = localStorage.getItem("info");
 }
