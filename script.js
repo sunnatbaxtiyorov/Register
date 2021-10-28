@@ -60,6 +60,7 @@ send.addEventListener("click",addInfo);
 
 
 
+
 function addInfo(){
     const info = {
         name: document.getElementById('name').value,
@@ -70,9 +71,35 @@ function addInfo(){
     }
 
     localStorage.setItem("info",JSON.stringify(info));
+
+            
+    if(document.getElementById("name").value == "" ){
+        document.getElementById("name").classList.add("validation");
+      
+    }else{
+        document.getElementById("name").classList.remove("validation");
+    }
+    if(document.getElementById("surname").value == ""){
+        document.getElementById("surname").classList.add("validation");
+    }else{
+        document.getElementById("surname").classList.remove("validation");
+
+    }
+
+    if(document.getElementById("number").value == ""){
+        document.getElementById("number").classList.add("validation");
+    }else{
+        document.getElementById("number").classList.remove("validation");
+
+    }
+
+    document.querySelector(".result").innerHTML = localStorage.getItem("info");
+
+    setTimeout(() => {
+        document.getElementById("number").classList.remove("validation");
+        document.getElementById("name").classList.remove("validation");
+        document.getElementById("surname").classList.remove("validation");
+
+    }, 2000);
 }
 
-
-function resultBtn(){
-    document.querySelector(".div").innerHTML = localStorage.getItem("info");
-}

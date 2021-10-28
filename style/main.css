@@ -149,4 +149,8 @@ input, select {
   width: 100%;
   background-color: #237070;
 }
+
+.validation {
+  border: 1px solid red;
+}
 /*# sourceMappingURL=main.css.map */

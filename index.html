@@ -10,7 +10,7 @@
 <body>
     
      <div class="container">
-        <form action="result.html" class="form">
+        <form action="" class="form">
             <input type="file" id="myFileInput">
             <img id="imgPreview" src="image/defaultImage.png" alt="">
             <div class="flex">
@@ -30,13 +30,13 @@
             </div>
             <br>
             <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter Your Name" required>
+            <input type="text" id="name" placeholder="Enter Your Name" required autocomplete="on">
             <br>
             <label for="surname">Surname:</label>
             <input type="text" id="surname" placeholder="Enter Your Surname"required>
             <br>
             <label for="number">Phone Number:</label>
-            <input type="number" id="number" placeholder="Enter Your Phone Number"required>
+            <input type="text" id="number" placeholder="Enter Your Phone Number"required>
             <br>
             <label for="">Job:</label>
             
@@ -68,8 +68,9 @@
             </select>
             <button class="send">Send</button>
         </form>
+        <div class="result">
+        </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
